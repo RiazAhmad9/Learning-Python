@@ -1,8 +1,6 @@
 # Script for practicing input and output
-Name = input("Enter your name:")
-Age = input("Enter your age:")
-From = input("Enter where are you from:")
-
-print(f"Nice to meet you,{Name}! You are {Age} years old from {From}.")
-print(f"Nice to meet you, {Name}! You are {Age} years old from {From}.")
+name = input("Enter your name:")
+age = input("Enter your age:")
+birthplace = input("Enter where are you from:")
+print(f"Nice to meet you, {name}! You are {age} years old from {birthplace}.")
 input("\nPress Enter to exit...")
