@@ -4,3 +4,4 @@ To calculate in python I have to use number types such as float or int. If not t
 Learned about the function [round] which is used to round numbers to the nearest integer. But I can set it to a point of deecimal.
 Learned a little about format specifier[:,] which separates the value with comma.
 Learned how to define[def] my own function. [return] stores the value and gives back to the function to show the result.
+Learned about the built-in-function [pow(n, x)] which shows the result of n to the power of x.
