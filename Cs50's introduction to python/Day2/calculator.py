@@ -1,11 +1,11 @@
 # Calculating numbers
 
-# Ask the user for two numbers
-x = float(input("What's x? "))
-y = float(input("What's y? "))
+def main():
+    x = int(input("What is x? "))
+    print("x squared is", square(x))
+
+def square(n):
+    return n * n
 
 
-z = round(x / y, 3)
-
-# sum of two numbers rounded to the nearest integer
-print(f"{z:,}")
+main()
