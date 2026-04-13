@@ -1,13 +1,12 @@
 # Outputs the file media type if found.
 
-# Asks input.
-text = input("File name: ")
-
-#Converts string to lowercase.
-text = text.casefold().strip()
+# Asks inpu, converts string to lowercase and removes shitespaces from both end.
+text = input("File name: ").strip().lower()
 
 #Checks conditions and prints result.
-if text.endswith(".jpg" or ".jpeg"):
+if text.endswith(".jpg"):
+    print("image/jpeg")
+elif text.endswith(".jpeg"):
     print("image/jpeg")
 elif text.endswith(".png"):
     print("image/png")

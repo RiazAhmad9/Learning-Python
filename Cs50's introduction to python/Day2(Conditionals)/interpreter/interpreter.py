@@ -16,4 +16,6 @@ elif y == "*":
     result = x * z
 elif y == "/":
     result = x / z
+
+# Prints final result.
 print(f"{result:.1f}")

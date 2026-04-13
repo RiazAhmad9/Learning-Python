@@ -1,7 +1,7 @@
-# Grading System
+# Grading System.
 
 
-# Get the score from the user
+# Get the score from the user.
 score = float(input("Enter the score: "))
 
 # Determine the grade based on the score
@@ -37,7 +37,7 @@ else:
                                     else:
                                         grade = "F"
 
-# Print the grade
+# Print the grade.
 print("Your grade is:", grade)                                        
     
 
