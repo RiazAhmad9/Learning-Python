@@ -1,4 +1,4 @@
-# Turns every uppercase into lowercase and adds '_' before it.
+# Turns every uppercase into lowercase and adds "_" before it.
 
 # User input and a initial output storage.
 text = input("cameCase: ")
