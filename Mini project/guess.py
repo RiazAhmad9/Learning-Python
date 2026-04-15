@@ -1,25 +1,10 @@
-# A number guessing game.
+# A number guessing game
 
-# 'main' function where user inserts a number and result gets print considering the conditions.
-def main():
-    # Loop for the user to keep guessing number.
-    while True:
-        num = int(input("Your Number: "))
-        # Variable which stores the result from 'checker' function.
-        result = checker(num)
-        # Checks if answer is correct. If so then prints 'correct' else gives hint and asks for another number.
-        if result == "correct":
-            print(result)
-            break
-        else:
-            print(result)
-            continue
-
-# Imports a random integer and stores into 'secret_num' variable.
+# Imports a random integer and stores into 'secret_num' variable
 import random
-secret_num = random.randint(1, 100)   
+secret_num = random.randint(1, 100)
 
-# 'checker' function where users input gets checked and an answer is returned.
+# 'checker' function where user input gets checked and an answer is returned
 def checker(k):
     if k == secret_num :
         return "correct"
@@ -28,5 +13,24 @@ def checker(k):
     elif k > secret_num :
         return "too high"
 
-# Calls main.
-main()
+# 'main' function where user inserts a number and result gets print considering the conditions
+def main():
+    # Loop for the user to keep guessing number.
+    while True:
+        # If valid input is not found prints a specific message and continues the loop
+        try:
+            num = int(input("Guess a number (1-100): "))
+        except ValueError:
+            print("Enter a whole number.")
+            continue
+        # 'return' variable which stores the returned value from 'checker' function
+        result = checker(num)
+        # Prints conclusion
+        print(result)
+        # Breaks if conclusion is final else continues
+        if result == "correct":
+            break
+
+# Calls main
+if __name__ == "__main__":
+    main()
