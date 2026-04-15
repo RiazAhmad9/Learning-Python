@@ -1,3 +1,6 @@
+# Fuel gauge indicator.
+
+# 'main' function which takes input in a loop until valid input, checks for error and prints the final result.
 def main():
     while True:
         try:
@@ -10,7 +13,7 @@ def main():
         except (ValueError, ZeroDivisionError):
             pass
 
-
+# 'fuel' function which calculate the integers and convert them to specific answer considering the conditions. 
 def fuel(x, y):
     p = round(x / y * 100)
     if p >= 99:
@@ -20,9 +23,6 @@ def fuel(x, y):
     else:
         return f"{p}%"
     
-
+# Calls main.
 main()
-
-
-
         
