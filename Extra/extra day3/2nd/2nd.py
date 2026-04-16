@@ -1,9 +1,9 @@
-# Printing even numbers between 1-50
+# Printing even numbers between (1-50)
 
-# Giving variable a starting value.
+# Storing starting value of variable 'i'
 i = 1
 
-# Printing result if condition checks out.
+# Printing result if condition checks out
 while i <= 50:
     if i % 2 == 0:
         print(i)

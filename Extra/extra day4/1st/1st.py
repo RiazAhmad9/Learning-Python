@@ -1,13 +1,13 @@
-# A simple function to greet the input.
+# A simple function to greet the user
 
-# Defined a function 'main' which takes input from user and prints the 'greet' functions message.
+# Function 'main' which stores input in 'x' variable and prints greeting message
 def main():
     x = input("What's your name? ")
     print(greet(x))
 
-# Defines the function 'greet' which modifies the input.
+# Function 'greet' which modifies the input
 def greet(name):
     return f"Greetings, {name}"
 
-# Calls main.
+# Calls 'main' function
 main()

@@ -1,9 +1,9 @@
-# Printing a pattern with the help of loop.
+# Printing a pattern of '*'
 
-# Strating variable fixed value.
+# Strating variable fixed value
 i = 1
 
-# Printing the pattern with the help of the condition.
+# Printing the pattern with the help of the loop
 while i <= 5:
     print("*" * i)
     i += 1

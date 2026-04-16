@@ -1,9 +1,9 @@
-# A simple sum calculator
+# A simple (sum) calculator
 
-# Giving the initial variable a fixed value.
+# Seting variable 'total' initial value
 total = 0
 
-# Taking input until input is 'done' and calculating the sum.
+# Stores input in a loop until user inputs done and calculates the sum
 while True:
     n = input("Number: ")
     if n == "done":
@@ -12,6 +12,6 @@ while True:
         total += float(n)
         continue
 
-# Printing total sum.
+# Prints total 
 print(total)
 
