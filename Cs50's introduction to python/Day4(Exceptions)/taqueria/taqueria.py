@@ -1,31 +1,31 @@
-# Felipe’s Taqueria menu price calculator.
+# Felipe’s Taqueria order price calculator
 
-# Defined main function.
+# 'main' function which takes input, calculates total and prints it, and continues until user is done
 def main():
-    # Stores a initial value.
+    # Stores a initial value
     total_cost = 0
-    # Loops until the user is done and prints the total price each time.
+    # Loops until the user is done and prints the total price each time
     while True:
-        # Checks for valid input.
+        # Checks for valid input
         try:
             order = input("Item: ").lower().strip()
-            # Stores the price from dictionary.
+            # Stores the price from dictionary
             result = total(order)
-            # If result is valid prints the total_cost and add's it to total_cost.
+            # If result is valid adds to total_cost, prints the total_cost and continues the loop
             if result is not None:
                 total_cost += result
                 print(f"Total: ${total_cost:.2f}")
             continue
-        # Stops the loop if user inputs 'control-z' or 'control=d'.
+        # Stops the loop if user inputs 'control-z' or 'control=d'
         except EOFError:
             break
 
-# 'total' function which checks if input is in dictionary and returns the value.
+# 'total' function to checks if input is in dictionary and returns the value
 def total(key):
     if key in price:
         return price[key]
 
-# Price dictionary.
+# Price dictionary
 price = {
     "baja taco": 4.25,
     "burrito": 7.50,
@@ -38,5 +38,5 @@ price = {
     "tortilla salad": 8.00
 }
 
-# Calls main.
+# Calls main
 main()

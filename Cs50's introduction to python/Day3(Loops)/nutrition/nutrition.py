@@ -1,6 +1,6 @@
-# Printing calories for specific fruits.
+# Printing calories for specific fruits
 
-# Fruits calorie dictionary.
+# Fruits calorie dictionary
 fruits ={
     "apple": 130,
     "avocado": 50,
@@ -24,9 +24,9 @@ fruits ={
     "watermelon": 280,
 }
 
-# User input.
+# Store user input in varaible 'n'
 n = input("Item: ").strip().lower()
 
-# Prints value if found in dictionary.
+# Prints value if found in dictionary
 if n in fruits:
     print("Calories:", fruits[n])

@@ -1,10 +1,10 @@
-# Basic Calculation(sum,diff,prod,div,avg,rem) in Python
+# Basic Calculation(sum, diff, prod, div, rem) in Python
 
-#Ask the user for three numbers
+# Stores user input in (a, b, c) variable 
 a = float(input("Enter the first number: "))
 b = float(input("Enter the second number: "))
 c = float(input("Enter the third number: "))
 
-#Calculate and print the sum, difference, product, quotient, average and remainder of the three numbers(use end=" " to print in the same line)
-print(f"Sum = {a + b + c}, Difference = {a - b - c}, Product = {a * b * c}, Quotient = {a / b / c},", end=" ")
-print(f"Average = {(a + b + c) / 3}, Remainder = {a % b % c}")
+# Prints sum, diff, prod, div, rem and 'end' parameter to end the line after print
+print(f"Sum = {a + b + c}\nDifference = {a - b - c}\n", end="")
+print(f"Product = {a * b * c}\ndivision = {(a / b / c):.2f}\nRemainder = {a % b % c}")

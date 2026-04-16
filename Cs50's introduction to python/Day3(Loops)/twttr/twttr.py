@@ -1,15 +1,16 @@
-# Removes vowels from the string.
+# Removes vowels from the string
 
-# Takes input and stores initial output.
+# Stores input in 'text' variable
 text = input("Input: ")
+# Creates a 'final' variable to store value later on
 final = ""
 
-# Loops until vowels are removed.
+# Loops until vowels are removed
 for i in text:
-    if i in ["a", "e", "i", "o", "u"]:
+    if i.lower() in ["a", "e", "i", "o", "u"]:
         final += ""
     else:
         final += i
 
-# Prints the final result.
+# Prints the output
 print("Output:", final)

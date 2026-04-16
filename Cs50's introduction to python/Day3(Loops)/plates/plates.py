@@ -1,6 +1,6 @@
-# Defins a plate number considering some rules.
+# Defines a plate number considering few rules
 
-# Main body which shows the plate number either 'valid' or 'invalid'.
+# 'main' function which shows the plate number either 'valid' or 'invalid'
 def main():
     plate = input("Plate: ")
     if is_valid(plate):
@@ -8,32 +8,32 @@ def main():
     else:
         print("Invalid")
 
-# Defins the function 'is_valid'.
+# Defines the function 'is_valid'
 def is_valid(s):
-    # Checks if the string is between 2 and 6 letters.
+    # Checks if the string is between 2 and 6 letters
     if  len(s) < 2 or len(s) > 6:
         return False
-    # Checks if first two character is a alphabet.
+    # Checks if first two character is an alphabet
     if not s[0].isalpha() or not s[1].isalpha():
         return False
-    # Sets the variable 'digit' value to false.
+    # Sets variable 'digit' initial value to false
     digit = False
-    # Initiates the loop to check for specific integers.
+    # Initiates the loop to check for specific integers
     for i in s:
-        # Checks if the next character is a number.
+        # Checks if next character is a number
         if i.isdigit():
-            # Checks if first integer is number '0'.
+            # Checks if first integer is number '0'
             if not digit and i == "0":
                 return False
-            # If character is a number then changes 'digit' value to true.
+            # If character is a number then changes 'digit' value to true
             digit = True
-        # Checks if digit value is true and next character is a alphabet. 
+        # Checks digit value and if next character is a alphabet
         if digit and i.isalpha():
             return False
-        # Checks if there's any other character rather than alphabet and numbers.
+        # Checks if there's any other character rather than alphabet and numbers
         if not i.isalpha() and not i.isdigit():
             return False
     return True
 
-# Calls main.
+# Calls main
 main()

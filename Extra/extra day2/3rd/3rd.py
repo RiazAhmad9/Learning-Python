@@ -1,13 +1,13 @@
-# Simple calculator program.
+# Simple calculator for (sum, diff, prod, div)
 
-# Takes two numbers from user.
+# Stores two number in (a, b) variable
 a = float(input("Enter first number: "))
 b = float(input("Enter second number: "))
 
-# Takes operator from user.
+# Stores operator from user in 'c' variable
 c = input("Enter operator (+, -, *, /): ")
 
-# Performs calculation based on operator.
+# Performs calculation based on operator
 if c == "+":
     result = a + b
 elif c == "-":
@@ -17,5 +17,5 @@ elif c == "*":
 elif c == "/":
     result = a / b
 
-# Prints the result.
+# Prints result
 print("Result: ", result)

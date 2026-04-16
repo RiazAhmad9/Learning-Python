@@ -1,4 +1,4 @@
-# Number GUESSING GAME
+# NUMBER GUESSING GAME
 
 A command-line game where you try to guess between 1 and 100.
 
@@ -12,11 +12,11 @@ Run python guess.py
 - The game will display too high or too low
 - You have 10 attempts to guess the correct number
 
-## Project Structure
+## PROJECT STRUCTURE
 
 - checker() = verifies the answer and returns the result
 - main() = stores user input, track attempts, runs game loop and prints answer
 
-## Requirements
+## REQUIREMENTS
 
 - Python 3.x

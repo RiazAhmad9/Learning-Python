@@ -1,7 +1,7 @@
-# Age conversion in Python
+# Age conversion
 
-#Ask the user for their birth year
+# Stores user input in 'age' variable
 age = int(input("Enter your birth year: "))
 
-#Calculate and print the age of the user in the year 2026
+# Prints the calculated age of the user with the help of 'f' string
 print(f"You are {2026 - age} years old")

@@ -1,7 +1,7 @@
-# Temperature Conversion in Python
+# Temperature Conversion (C to F)
 
-#Ask for the temperature
+# Stores the temperature(C)
 c = float(input("Enter the temperature in Celsius: "))
 
-#Convert the temperature to Fahrenheit and print the result
+# Prints the converted temperature(F) and 'u00b0' adds a degree sign
 print(f"{c}\u00b0C = {c * 9 / 5 + 32}\u00b0F")

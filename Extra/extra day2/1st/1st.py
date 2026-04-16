@@ -1,10 +1,10 @@
-# Grading System.
+# Grading System
 
 
-# Get the score from the user.
+# Store float in 'score' variable
 score = float(input("Enter the score: "))
 
-# Determine the grade based on the score
+# Stores a specific value in 'grade' variable considering the conditions
 if score >= 93:
     grade = "A"
 else:
@@ -37,7 +37,7 @@ else:
                                     else:
                                         grade = "F"
 
-# Print the grade.
+# Prints grade
 print("Your grade is:", grade)                                        
     
 

@@ -1,7 +1,7 @@
-# Even and Odd Number Checker in Python
+# Even and Odd Number Checker
 
-#Ask the user for a number
+# Stores input in 'a' variable if it is a integer
 a = int(input("Enter a number: "))
 
-#Check if the number is even or odd and print the result
+# Prints even or odd based on the condition
 print("Even" if a % 2 == 0 else "Odd")

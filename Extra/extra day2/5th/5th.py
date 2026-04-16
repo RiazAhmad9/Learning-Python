@@ -1,13 +1,14 @@
-# Checks if a year is a leap year.
+# Leap year checker
 
-# Takes input from the user and checks if it is a valid input or not.
+# Stores valid input in 'a' variable
 try:
     a = int(input("Enter a year: "))
-except ValueError:
+# If input is invalid then prints error message and exits 
+except (ValueError, NameError):
     print("Invalid input. Please enter a valid year.")
-    exit()    
+    exit()
 
-# Checks if the year is a leap year or not.
+# Checks if the year is a leap year and prints there for
 if (a % 4 == 0 and a % 100 != 0) or (a % 400 == 0):
     print(a, "is a leap year.")
 else:

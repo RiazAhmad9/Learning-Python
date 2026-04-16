@@ -1,10 +1,10 @@
-# Checks if the number is positive, negative or zero.
+# Checks if number is positive, negative or zero
 
 
-# Taking input from the user.
+# Stores input 
 a = float(input("Enter a number: "))
 
-# Checks if the number is positive, negative or zero and prints the result.
+# Checks if number is positive, negative or zero and prints result
 if a > 0:
     print("Positive")
 elif a < 0:
