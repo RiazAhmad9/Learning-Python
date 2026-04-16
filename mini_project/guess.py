@@ -40,6 +40,8 @@ def main():
         print(result)
         # Breaks if conclusion is final else continues
         if result == "correct":
+            # Prints how many attempts it took
+            print(f"You took {att} guesses!")
             again = input("Play again? (y/n) ").lower()
             # If 'again' variable value is set to y then runs 'main()' again else breaks.
             if again == "y":
