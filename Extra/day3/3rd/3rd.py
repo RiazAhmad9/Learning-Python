@@ -1,12 +1,8 @@
 # Multiplication table up to 10
 
-# Stores input in 'n' variable
-n = int(input("Number: "))
-
-# Giving variable 'i' a starting value
+number = int(input("Number: "))
 i = 1
-
-# Printing result until the condition meets
+# 'number * i' to print aslike a multiplication table
 while i <= 10:
-    print(f"{n} x {i} = {n * i}")
+    print(f"{number} x {i} = {number * i}")
     i += 1

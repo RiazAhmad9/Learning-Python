@@ -1,29 +1,24 @@
-# Compares two number
+# Compares two number and prints the largest number
 
-# 'main' function which stores input from user and prints the largest number
 def main():
     x = float(input("First number: "))
     y = float(input("Second number: "))
-    print("Largest number is", larger(x, y))
+    print("Largest number is", compare(x, y))
 
-# Defined a function 'larger' to compare between two numbers
-def larger(x, y):
+def compare(x, y):
     if x > y :
-        # Sets variable 'result' value to 'x'
-        result = x
-        # Returns the value as int if it's a whole number else float
-        if result == int(result):
-            return int(result)
+        number = x
+        # if statement to print whole numbers as whole number
+        if number == int(number):
+            return int(number)
         else:
-            return result
+            return number
     else:
-        # Sets variable 'result' value of 'y'
-        result = y
-        # Returns the value as int if it's a whole number else float
-        if result == int(result):
-            return int(result)
+        number = y
+        if number == int(number):
+            return int(number)
         else:
-            return result
+            return number
 
-# Calls main
-main()
+if __name__ == "__main__":
+    main()

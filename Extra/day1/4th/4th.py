@@ -1,7 +1,5 @@
 # Age conversion
 
-# Stores user input in 'age' variable
+# 'int' data type to take whole numbers only
 age = int(input("Enter your birth year: "))
-
-# Prints the calculated age of the user with the help of 'f' string
 print(f"You are {2026 - age} years old")

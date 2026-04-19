@@ -1,15 +1,16 @@
 # Reversing word by word
 
-# Stores user input in 'text' variable and prints the final output
 def main():
     text = input("Input: ")
     print("Output:", convert(text))
 
-# 'convert' function splits input into strings, reverses them and return them by gluing back together
 def convert(x):
+    # 'split()' to split the string
     x = x.split()
+    # 'reverse()' to invert strings
     x.reverse()
+    # '" ".join()' to glue them back on whitespace
     return " ".join(x)
 
-# Calls main
-main()
+if __name__ == "__main__":
+    main()

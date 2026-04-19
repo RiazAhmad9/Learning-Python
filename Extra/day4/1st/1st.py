@@ -1,13 +1,11 @@
 # A simple function to greet the user
 
-# Function 'main' which stores input in 'x' variable and prints greeting message
 def main():
-    x = input("What's your name? ")
-    print(greet(x))
+    text = input("What's your name? ")
+    print(greet(text))
 
-# Function 'greet' which modifies the input
 def greet(name):
     return f"Greetings, {name}"
-
-# Calls 'main' function
-main()
+# if statement so file doesn't run on import
+if __name__ == "__main__":
+    main()
