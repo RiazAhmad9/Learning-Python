@@ -19,7 +19,7 @@ while True:
 result = ""
 for letter in text:
     if letter.isalpha():
-        if letter.lower():
+        if letter.islower():
             result += chr((ord(letter) - ord("a") + shift) % 26 + ord("a"))
         else:
             result += chr((ord(letter) - ord("A") + shift) % 26 + ord("A"))
