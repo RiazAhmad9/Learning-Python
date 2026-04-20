@@ -12,9 +12,12 @@ def load():
         return {}
     
 def save():
-    with open(FILE, "w") as contacts_file:
-        json.dump(contacts, contacts_file)
-
+    try:
+        with open(FILE, "w") as contacts_file:
+            json.dump(contacts, contacts_file)
+    except OSError:
+        print("Could not save contacts")
+        
 contacts = load()
 
 def add():
