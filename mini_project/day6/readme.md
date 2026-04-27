@@ -1,22 +1,20 @@
-# NUMBER GUESSING GAME
+# Number Guessing Game
 
-A command-line game where you try to guess between 1 and 100.
+A command-line game where you try to guess a random number between 1 and 100.
 
-## HOW TO RUN
+## How to Run
 
-Run python guess.py
+```bash
+python number_guessing_game.py
+```
 
-## HOW TO PLAY
+## How to Play
 
-- Enter a whole number between 1 and 100
-- The game will display too high or too low
-- You have 10 attempts to guess the correct number
+- Guess a whole number between 1 and 100
+- The game tells you if your guess is too high or too low
+- You have 10 attempts to guess correctly
+- After each round, you can choose to play again or quit
 
-## PROJECT STRUCTURE
-
-- checker() = verifies the answer and returns the result
-- main() = stores user input, track attempts, runs game loop and prints answer
-
-## REQUIREMENTS
+## Requirements
 
 - Python 3.x

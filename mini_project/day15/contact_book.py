@@ -1,6 +1,3 @@
-import json
-import re
-
 """
 Contact Book — CLI phonebook application
 =========================================
@@ -60,10 +57,12 @@ KNOWN LIMITATIONS:
 - Number duplicate check compares raw strings — +61412711 and 412711
   are treated as different numbers even if they resolve to the same line
 """
-
+import json
+import re
 
 FILE = "contact_book.json"
 contacts = {}
+
 
 def load():
     try:
@@ -72,12 +71,14 @@ def load():
     except (FileNotFoundError, json.JSONDecodeError):
         return{}
 
+
 def save():
     try:
         with open(FILE, "w") as file:
             json.dump(contacts, file)
     except OSError:
         print("Failed to save")
+
 
 def add():
     while True:
@@ -129,12 +130,14 @@ def add():
         return
     save()
 
+
 def search():
     name = input("Name: ").lower().strip()
     if name in contacts:
         print(f"Name: {name.title()}\nNumber: {contacts[name]['number']}\nEmail: {contacts[name]['email']}")
     else:
         print("Name not found")
+
 
 def update():
     name = input("Name: ").lower().strip()
@@ -172,12 +175,14 @@ def update():
                 break
     save()
 
+
 def show_list():
     if not contacts:
         print("No contacts saved")
         return
     for name, contact in sorted(contacts.items()):
         print(f"Name: {name.title()}\nNumber: {contact['number']}\nEmail: {contact['email']}")
+
 
 def delete():
     name = input("Name: ").lower().strip()
@@ -187,6 +192,7 @@ def delete():
         save()
     else:
         print("Name not found")
+
 
 def main():
     while True:
@@ -205,6 +211,7 @@ def main():
             break
         else:
             print("Please select between (1-6)")
+
 
 if __name__ == "__main__":
     contacts = load()
