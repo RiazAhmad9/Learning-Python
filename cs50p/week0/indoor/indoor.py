@@ -1,10 +1,10 @@
-# Makes input into lowercase.
+"""
+indoor.py
+---------------
+Converts user input to lowercase.
 
-# Users input.
+- .lower(): converts all uppercase letters to lowercase
+"""
+
 text = input()
-
-# Converts string into lowercase.
-text = text.casefold()
-
-# Prints result.
-print(text)
+print(text.lower())

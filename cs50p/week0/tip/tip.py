@@ -1,19 +1,43 @@
-# A simple calculator to calculate tip per meal.
+"""
+tip.py
+-----------------
+Calculates the tip amount based on meal cost and tip percentage.
 
-# Function 'main' which takes user input and calculates the tip percent.
+- dollars_to_float(): strips "$" and converts to float
+- percent_to_float(): strips "%" and divides by 100 to get a decimal
+- ValueError caught in main(): keeps conversion functions clean,
+  handles bad input where it occurs
+- 0 < percent <= 1: validates percentage is between 1 and 100 after conversion
+- :.2f: formats tip to 2 decimal places
+- if __name__ == "__main__": ensures main() only runs when executed directly
+"""
+
 def main():
-    dollars = dollars_to_float(input("How much was the meal? "))
-    percent = percent_to_float(input("What percentage would you like to tip? "))
+    while True:
+        try:
+            dollars = dollars_to_float(input("How much was the meal? "))
+            break
+        except ValueError:
+            print("Enter a valid amount")
+
+    while True:
+        try:
+            percent = percent_to_float(input("Tip percentage: "))
+            if not 0 < percent <= 1:
+                print("Enter a percentage between 1 and 100")
+                continue
+            break
+        except ValueError:
+            print("Enter a valid percentage")
+
     tip = dollars * percent
     print(f"Leave ${tip:.2f}")
 
-# Defins dollars and strip '$' sign
-def dollars_to_float(d):
-    return float(d.strip("$"))
+def dollars_to_float(dollars):
+    return float(dollars.strip("$"))
 
-# Defins percent and strip '%' sign
-def percent_to_float(p):
-    return float(p.strip("%")) / 100
+def percent_to_float(percent):
+    return float(percent.strip("%")) / 100
 
-# Calls main again.
-main()
+if __name__ == "__main__":
+    main()

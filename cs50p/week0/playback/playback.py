@@ -1,10 +1,10 @@
-# Replaces each space with '...'
+"""
+playback.py
+-----------------
+Replaces every space in the input with '...'.
 
-# Users input.
+- .replace(" ", "..."): substitutes all occurrences of space with ellipsis
+"""
+
 text = input()
-
-# Replace function.
-text = text.replace(" ", "...")
-
-# Prints result.
-print(text)
+print(text.replace(" ", "..."))
