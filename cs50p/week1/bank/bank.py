@@ -1,13 +1,13 @@
-'''
-.lower() converts the input to lowercase so "Hello" and "HELLO" are treated the same.
-.strip() removes leading and trailing whitespace so " hello " still matches.
-Both are chained directly on input() so we never store the raw version.
+"""
+bank.py
+------------------
+Charges different amounts based on how the user greets.
 
-.startswith() checks if a string begins with the given substring.
-Order matters here — "hello" is checked before "h" because every "hello"
-also starts with "h". If we checked "h" first, "hello" would never be reached.
-'''
-
+- .lower().strip(): normalises input — handles case and whitespace
+- .startswith(): checks the beginning of the string
+- order matters: "hello" checked before "h" — every "hello" starts with "h",
+  so checking "h" first would prevent "hello" from ever being reached
+"""
 
 text = input("Greeting: ").lower().strip()
 

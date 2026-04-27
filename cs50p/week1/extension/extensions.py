@@ -1,12 +1,16 @@
-# Outputs the file media type if found.
+"""
+extension.py
+-------------
+Outputs the MIME type of a file based on its extension.
 
-# Asks inpu, converts string to lowercase and removes shitespaces from both end.
+- .strip().lower(): normalises input — handles case and whitespace
+- .endswith(tuple): checks multiple extensions in one call
+- application/octet-stream: default MIME type for unknown file types
+"""
+
 text = input("File name: ").strip().lower()
 
-#Checks conditions and prints result.
-if text.endswith(".jpg"):
-    print("image/jpeg")
-elif text.endswith(".jpeg"):
+if text.endswith((".jpg", ".jpeg")):
     print("image/jpeg")
 elif text.endswith(".png"):
     print("image/png")
