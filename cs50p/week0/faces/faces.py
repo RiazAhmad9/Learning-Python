@@ -1,20 +1,23 @@
-# Converting text emoji with icon emojis
+"""
+faces.py
+------------------
+Converts text emoticons into emoji characters.
 
-# Imports all emoji icons.
+- emoji.emojize(): converts emoji shortcodes like :slightly_smiling_face:
+  into their actual emoji characters
+- .replace(): substitutes each text emoticon with the corresponding emoji
+- if __name__ == "__main__": ensures main() only runs when executed directly
+"""
 import emoji
 
-# Function 'main' where user gives input and prints converted input.
 def main():
-    user = input()
-    print(convert(user))
+    text = input()
+    print(convert(text))
 
-# Function 'convert' where user input is converted.
 def convert(text):
     text = text.replace(":)", emoji.emojize(":slightly_smiling_face:"))
     text = text.replace(":(", emoji.emojize(":slightly_frowning_face:"))
     return text
 
-# Calls main again.
-main()
-    
-
+if __name__ == "__main__":
+    main()
