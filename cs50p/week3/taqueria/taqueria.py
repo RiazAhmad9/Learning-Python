@@ -1,31 +1,16 @@
-# Felipe’s Taqueria order price calculator
+"""
+taqueria.py
+-----------
+Calculates a running total for a taqueria order until EOF (Ctrl+D / Ctrl+Z).
 
-# 'main' function which takes input, calculates total and prints it, and continues until user is done
-def main():
-    # Stores a initial value
-    total_cost = 0
-    # Loops until the user is done and prints the total price each time
-    while True:
-        # Checks for valid input
-        try:
-            order = input("Item: ").lower().strip()
-            # Stores the price from dictionary
-            result = total(order)
-            # If result is valid adds to total_cost, prints the total_cost and continues the loop
-            if result is not None:
-                total_cost += result
-                print(f"Total: ${total_cost:.2f}")
-            continue
-        # Stops the loop if user inputs 'control-z' or 'control=d'
-        except EOFError:
-            break
-
-# 'total' function to checks if input is in dictionary and returns the value
-def total(key):
-    if key in price:
-        return price[key]
-
-# Price dictionary
+- price dict: maps menu items to their prices, defined globally above functions
+- .lower().strip(): normalises input — handles case and whitespace
+- total(): returns price if item is in dict, None otherwise
+- result is not None: silently ignores invalid items, only adds valid ones
+- total_cost += result: accumulates running total
+- EOFError: raised when user signals end of input, exits the loop
+- if __name__ == "__main__": ensures main() only runs when executed directly
+"""
 price = {
     "baja taco": 4.25,
     "burrito": 7.50,
@@ -38,5 +23,24 @@ price = {
     "tortilla salad": 8.00
 }
 
-# Calls main
-main()
+
+def main():
+    total_cost = 0
+    while True:
+        try:
+            order = input("Item: ").lower().strip()
+            result = total(order)
+            if result is not None:
+                total_cost += result
+                print(f"Total: ${total_cost:.2f}")
+        except EOFError:
+            break
+
+
+def total(key):
+    if key in price:
+        return price[key]
+
+
+if __name__ == "__main__":
+    main()

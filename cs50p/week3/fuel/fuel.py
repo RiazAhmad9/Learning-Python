@@ -1,19 +1,16 @@
-'''
-convert() takes a string in "X/Y" format, splits it on "/", and converts
-both parts to integers. It raises ZeroDivisionError if Y is 0, and
-ValueError if X is greater than Y or either is negative. Returns the
-fraction as a percentage rounded to the nearest int.
+"""
+fuel.py
+-------------
+Converts a fraction (X/Y) to a fuel gauge reading.
 
-gauge() takes an int and returns "E" if <= 1, "F" if >= 99, or "Z%" otherwise.
-It only handles the display logic — no input or calculation happens here.
-
-main() handles all user input and re-prompts on ValueError or ZeroDivisionError.
-Separating convert() and gauge() from main() keeps logic testable —
-pure functions with no input/output are easy to test with pytest.
-
-if __name__ == "__main__" ensures main() only runs when the file is
-executed directly, not when imported as a module by another file.
-'''
+- convert(): splits "X/Y", validates, returns percentage rounded to nearest int
+  raises ZeroDivisionError if Y is 0
+  raises ValueError if X > Y or either is negative
+- gauge(): returns "E" if <= 1%, "F" if >= 99%, otherwise "Z%"
+- main(): handles input and re-prompts silently on ValueError or ZeroDivisionError
+- separating convert() and gauge() from main(): keeps logic pure and testable with pytest
+- if __name__ == "__main__": ensures main() only runs when executed directly
+"""
 
 def main():
     while True:
@@ -32,7 +29,7 @@ def convert(fraction):
     if x > y or x < 0 or y < 0:
         raise ValueError
     return round(x / y * 100)
-    
+
 def gauge(percentage):
     if percentage >= 99:
         return "F"

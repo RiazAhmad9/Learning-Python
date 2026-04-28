@@ -1,7 +1,13 @@
-# Printing calories for specific fruits
+"""
+nutrition.py
+-----------------
+Looks up and prints the calorie count of a fruit from a predefined dictionary.
 
-# Fruits calorie dictionary
-fruits ={
+- .strip().lower(): normalises input — handles whitespace and case
+- if n in fruits: only prints if fruit is found, silently ignores unknown inputs
+- fruits[n]: direct dictionary lookup by key
+"""
+fruit = {
     "apple": 130,
     "avocado": 50,
     "banana": 110,
@@ -24,9 +30,7 @@ fruits ={
     "watermelon": 280,
 }
 
-# Store user input in varaible 'n'
-n = input("Item: ").strip().lower()
 
-# Prints value if found in dictionary
-if n in fruits:
-    print("Calories:", fruits[n])
+item = input("Item: ").strip().lower()
+if item in fruit:
+    print(f"Calories: {fruit[item]}")

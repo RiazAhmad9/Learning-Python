@@ -1,27 +1,28 @@
-# Grocery list
+"""
+grocery.py
+---------------
+Collects grocery items until EOF (Ctrl+D / Ctrl+Z), then prints them
+sorted alphabetically in uppercase with quantities.
 
-# 'main' function where list gets sorted, numbered and printed alphabetically in uppercase
+- items = {}: dictionary to store item name as key, count as value
+- .lower().strip(): normalises input — handles case and whitespace
+- items.get(text, 0) + 1: increments count or starts at 1 if unseen
+- EOFError: raised when user signals end of input, triggers sorted print
+- sorted(items): returns alphabetically sorted list of keys
+- item.upper(): prints item name in uppercase
+- if __name__ == "__main__": ensures main() only runs when executed directly
+"""
+
 def main():
-    # 'item' dictonary to store values later on
     items = {}
-    # Loops until user is done and count them as well with the help of dictonary
     while True:
         try:
             text = input().lower().strip()
-            # Considering the condition statement adds '1' to the item from dictonary
-            if text in items:
-                items[text] = items[text] + 1
-            else:
-                items[text] = 1
-            continue
-        # Breaks the loop and prints the final list if user inputs 'control-z' or 'control-d'
+            items[text] = items.get(text, 0) + 1
         except EOFError:
-            # Sorts the items by alphabet
-            for i in sorted(items):
-                # Prints the sorted items in uppercase
-                print (items[i], i.upper())
-            # Breaks the loop
+            for item in sorted(items):
+                print(items[item], item.upper())
             break
 
-# Calls main
-main()
+if __name__ == "__main__":
+    main()

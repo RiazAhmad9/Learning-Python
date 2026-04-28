@@ -1,17 +1,20 @@
-# Turns every uppercase into lowercase and adds '_' before it
+"""
+camel.py
+-----------------
+Converts camelCase input to snake_case.
 
-# Stores user input in 'text' variable 
-text = input("cameCase: ")
-# A varaible to store value later on
+- isupper(): detects uppercase letters
+- "_" + i.lower(): prepends underscore and lowercases the letter
+- final +=: builds the result string character by character
+"""
+
+text = input("camelCase: ")
 final = ""
 
-# Adds character before uppercase words and converts it to lowercase
-for i in text:
-    if i.isupper():
-        # Adds all character along with '_' if condition meets to 'final'
-        final += "_" + i.lower()
+for letter in text:
+    if letter.isupper():
+        final += "_" + letter.lower()
     else:
-        final += i
+        final += letter
 
-# Prints output
 print("snake_case:", final)

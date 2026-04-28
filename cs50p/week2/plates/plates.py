@@ -1,19 +1,20 @@
-'''
-is_valid() checks a vanity plate string against the following rules:
-  1. Must be 2-6 characters long.
-  2. Must start with at least two letters.
-  3. Numbers cannot start with 0.
-  4. Once a digit appears, no letters can follow.
-  5. Only letters and digits are allowed — no spaces or punctuation.
+"""
+plates.py
+---------------
+Validates a vanity plate string against the following rules:
 
-number is a flag that tracks whether we have seen a digit yet.
-Once number is True, any letter after it immediately returns False.
-The flag starts as False and flips to True on the first digit encountered.
+1. Must be 2-6 characters long
+2. Must start with at least two letters
+3. Numbers cannot start with 0
+4. Once a digit appears, no letters can follow
+5. Only letters and digits allowed — no spaces or punctuation
 
-plate[0] and plate[1] directly index the first and second characters of the string.
-isalpha() returns True if the character is a letter.
-isdigit() returns True if the character is a digit.
-'''
+- number flag: tracks whether a digit has been seen — flips to True
+  on first digit, causing any subsequent letter to return False
+- plate[0], plate[1]: directly index first two characters to enforce rule 2
+- isalpha() / isdigit(): check character type without regex
+- if __name__ == "__main__": ensures main() only runs when executed directly
+"""
 
 def main():
     plate = input("Plate: ")
