@@ -1,7 +1,6 @@
 """
 BankAccount Class — OOP Fundamentals(classmethod)
 ===================================
-Demonstrates a basic class with attributes and methods.
 
 Class:
     BankAccount(account)

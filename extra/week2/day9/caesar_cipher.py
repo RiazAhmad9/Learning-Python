@@ -12,7 +12,6 @@ by a given number of positions in the alphabet.
 - preserves case: lowercase and uppercase handled separately
 - non-letter characters (spaces, punctuation) are kept as-is
 """
-
 result = ""
 text = input("Secret message: ")
 

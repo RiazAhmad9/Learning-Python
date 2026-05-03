@@ -30,7 +30,7 @@ Classes:
 Validation rules:
     Names   — Letters, spaces, apostrophes, hyphens only (regex).
     Numbers — Optional leading +, then digits/spaces/dashes/parentheses,
-              3–15 characters total (regex).
+              3-15 characters total (regex).
 
 Usage:
     python phonebook.py

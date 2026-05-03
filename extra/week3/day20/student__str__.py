@@ -1,7 +1,6 @@
 """
 Student Class — OOP Fundamentals __str__
 =================================
-Demonstrates a basic class with attributes and a method.
 
 Class:
     Student(name, grade)

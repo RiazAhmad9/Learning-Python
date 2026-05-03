@@ -1,7 +1,6 @@
 """
 Counter Class — OOP Fundamentals __str__
 ===================================
-Demonstrates a basic class with attributes and methods.
 
 Class:
     Counter(count)
