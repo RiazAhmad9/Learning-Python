@@ -28,7 +28,7 @@ class BankAccount:
         return cls(amount + bonus)
 
 def main():
-    account = BankAccount(1000)
+    account = BankAccount("hello")
     account_bonus = BankAccount.with_bonus(1000, 200)
     print(f"Account: {account}\nAccount with bonus: {account_bonus}")
 

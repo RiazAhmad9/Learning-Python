@@ -82,6 +82,11 @@ class Library:
         self.save()
         print("Added")
 
+    def search(self, title):
+        for book in self.books:
+            if book.title.lower() == title.lower():
+                return book
+        return None
 
     def remove(self, title):
         for book in self.books:
@@ -92,13 +97,7 @@ class Library:
                 return
         print("Book not found")
 
-    def search(self, title):
-        for book in self.books:
-            if book.title.lower() == title.lower():
-                return book
-        return None
-
-         
+ 
 def main():
     library = Library()
     library.load()
